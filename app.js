@@ -1,5 +1,5 @@
 
-This console log works!
+// This console log works!
 
 class CaptainChakaKhan {
     constructor() {
@@ -9,13 +9,13 @@ class CaptainChakaKhan {
     }
 
     attack(target) {
-        console.log("Captain Chaka Khan attacks with a couponers' vengeance!");
+        console.log("Captain Chaka Khan attacks with a couponer's vengeance!");
         let hitChance = Math.random();
         if (hitChance < this.accuracy) {
-            console.log(`It's a slap! Gucci Glorilla takes level ${this.firepower} damage to its' iconic double G insignia!`);
+            console.log(`It's a slap! Gucci Glorilla takes level ${this.firepower} damage to its iconic double G insignia!`);
             target.hull -= this.firepower;
         } else {
-            console.log("The attack missed and now Gucci Glorilla's price has increased significantly making it more difficult to attain!");
+            console.log("The attack missed and now Gucci Glorilla's price has increased significantly, making it more difficult to attain!");
         }
     }
 }
@@ -28,16 +28,17 @@ class GucciGlorilla {
     }
 
     attack(target) {
-        console.log("GucciGlorilla attacks with a sling shot fireball from its' strap!");
+        console.log("Gucci Glorilla attacks with a slingshot fireball from its strap!");
         let hitChance = Math.random();
         if (hitChance < this.accuracy) {
-            console.log("It's a on target smack and Captain Chaka Khan takes level ${this.firepower} damage to the wallet!");
+            console.log(`It's an on-target smack, and Captain Chaka Khan takes level ${this.firepower} damage to the wallet!`);
             target.hull -= this.firepower;
         } else {
-            console.log("Gucci Glorilla misses! Captain Chaka Khan ramps up for another strategic cost cutting attack!");
+            console.log("Gucci Glorilla misses! Captain Chaka Khan ramps up for another strategic cost-cutting attack!");
         }
     }
 }
+
 
 const captainChakaKhan = new CaptainChakaKhan();
 const gucciGlorilla = new GucciGlorilla();
@@ -50,14 +51,14 @@ while (captainChakaKhan.hull > 0 && gucciGlorilla.hull > 0) {
 }
 
 if (captainChakaKhan.hull > 0) {
-    console.log("Captain Chaka Khan wins and sent GucciGlorilla straight to a garage sale clearance table!");
+    console.log("Captain Chaka Khan wins and sent Gucci Glorilla straight to a garage sale clearance table!");
 } else {
-    console.log("The Gucci Glorilla wins and Captain Chaka Khan has to pay with an arm and a leg!");
+    console.log("The Gucci Glorilla wins, and Captain Chaka Khan has to pay with an arm and a leg!");
 }
 
 
 
-This console log works
+// This console log works
 
 
 class CardiBlast {
@@ -134,3 +135,66 @@ class Lattovuitton {
 }
 
 module.exports = { CardiBlast, Lattovuitton };
+
+
+
+// This Console log works
+
+class SoldierSade {
+    constructor() {
+        this.hull = 20;
+        this.firepower = 5;
+        this.accuracy = 0.7;
+    }
+
+    attack(target) {
+        console.log("Soldier Sade strikes with the power of a flash sale frenzy!");
+        let hitChance = Math.random();
+        if (hitChance < this.accuracy) {
+            console.log(`Boom! Beyonce Birkin Bag takes ${this.firepower} damage, and that iconic B just lost its shine!`);
+            target.hull -= this.firepower;
+        } else {
+            console.log("Missed! And now Beyonce Birkin Bag's rarity just skyrocketed, making it even harder to snag!");
+        }
+    }
+}
+
+class BeyonceBirkinBag {
+    constructor() {
+        this.hull = Math.floor(Math.random() * 4) + 3;
+        this.firepower = Math.floor(Math.random() * 3) + 2;
+        this.accuracy = Math.random() * 0.2 + 0.6;
+    }
+
+    attack(target) {
+        console.log("Beyonce Birkin Bag fires back with a designer whip from its golden chain strap!");
+        let hitChance = Math.random();
+        if (hitChance < this.accuracy) {
+            console.log(`Direct hit! Soldier Sade takes ${this.firepower} damage, and her budget just took a hit too!`);
+            target.hull -= this.firepower;
+        } else {
+            console.log("Swing and a miss! Soldier Sade dodges and prepares to cut those designer dreams down to size!");
+        }
+    }
+}
+
+const soldierSade = new SoldierSade();
+const beyonceBirkinBag = new BeyonceBirkinBag();
+
+while (soldierSade.hull > 0 && beyonceBirkinBag.hull > 0) {
+    soldierSade.attack(beyonceBirkinBag);
+    if (beyonceBirkinBag.hull > 0) {
+        beyonceBirkinBag.attack(soldierSade);
+    }
+}
+
+if (soldierSade.hull > 0) {
+    console.log("Soldier Sade wins! That Birkin bag is headed straight to the discount bin, defeated and dethroned!");
+} else {
+    console.log("The Beyonce Birkin Bag wins! Soldier Sade's wallet just got served an eviction notice!");
+}
+
+module.exports = { SoldierSade, BeyonceBirkinBag };
+
+
+
