@@ -1,5 +1,5 @@
 
-// This console log works!
+// // This console log works!
 
 class CaptainChakaKhan {
     constructor() {
@@ -58,10 +58,10 @@ if (captainChakaKhan.hull > 0) {
 
 
 
-// This console log works
+// // This console log works
 
 
-class CardiBlast {
+class ColonelCardiBlast {
     constructor() {
         this.hull = 20;
         this.firepower = 5;
@@ -69,13 +69,13 @@ class CardiBlast {
     }
 
     attack(target) {
-        console.log("Cardi Blast attacks by shooting fire ball from her flame throwing Red Bottom Heels!");
+        console.log("Colonel Cardi Blast attacks by shooting fireball from her flame-throwing Red Bottom Heels!");
         let hitChance = Math.random();
         if (hitChance < this.accuracy) {
-            console.log(`It's a hit! Latto Vuitton takes level ${this.firepower} damage to its'external Zipper exposing its' engine!`);
+            console.log(`It's a hit! Latto Vuitton takes level ${this.firepower} damage to its external zipper, exposing its engine!`);
             target.hull -= this.firepower;
         } else {
-            console.log("The attack failed! Latto Vuitton is lining up as many L's and V's as possible to create mega fireball!");
+            console.log("The attack failed! Latto Vuitton is lining up as many L's and V's as possible to create a mega fireball!");
         }
     }
 }
@@ -88,31 +88,31 @@ class LattoVuitton {
     }
 
     attack(target) {
-        console.log("Latto Vuitton attacks with a MEGA fireball propelled by the force of its' top handles!");
+        console.log("Latto Vuitton attacks with a MEGA fireball propelled by the force of its top handles!");
         let hitChance = Math.random();
         if (hitChance < this.accuracy) {
-            console.log(`It's not a miss! Cardi Blast takes level ${this.firepower} damage to her best weapon, the Red Bottom Heels!`);
+            console.log(`It's not a miss! Colonel Cardi Blast takes level ${this.firepower} damage to her best weapon, the Red Bottom Heels!`);
             target.hull -= this.firepower;
         } else {
-            console.log("Latto Vuitton misses! Cardi Blast swiftly clicks those red bootom heels building up energy for the next strike!");
+            console.log("Latto Vuitton misses! Colonel Cardi Blast swiftly clicks those red bottom heels, building up energy for the next strike!");
         }
     }
 }
 
-const cardiBlast = new CardiBlast();
+const colonelCardiBlast = new ColonelCardiBlast();
 const lattoVuitton = new LattoVuitton();
 
-while (cardiBlast.hull > 0 && lattoVuitton.hull > 0) {
-    cardiBlast.attack(lattoVuitton);
+while (colonelCardiBlast.hull > 0 && lattoVuitton.hull > 0) {
+    colonelCardiBlast.attack(lattoVuitton);
     if (lattoVuitton.hull > 0) {
-        lattoVuitton.attack(cardiBlast);
+        lattoVuitton.attack(colonelCardiBlast);
     }
 }
 
-if (cardiBlast.hull > 0) {
-    console.log("Cardi Blast wins cutting Latto Vuitton and it's prices in half!");
+if (colonelCardiBlast.hull > 0) {
+    console.log("Colonel Cardi Blast wins, cutting Latto Vuitton and its prices in half!");
 } else {
-    console.log("The Latto Vuitton wins and Cardi Blast pays the price!");
+    console.log("The Latto Vuitton wins, and Colonel Cardi Blast pays the price!");
 }
 
 class Lattovuitton {
@@ -134,11 +134,12 @@ class Lattovuitton {
     }
 }
 
-module.exports = { CardiBlast, Lattovuitton };
+module.exports = { ColonelCardiBlast, Lattovuitton };
 
 
 
-// This Console log works
+
+// // This Console log works
 
 class SoldierSade {
     constructor() {
@@ -195,6 +196,67 @@ if (soldierSade.hull > 0) {
 }
 
 module.exports = { SoldierSade, BeyonceBirkinBag };
+
+
+
+// This console log works
+
+class LieutenantLilKim {
+    constructor() {
+        this.hull = 20;
+        this.firepower = 5;
+        this.accuracy = 0.7;
+    }
+
+    attack(target) {
+        console.log("Lieutenant Lil Kim unleashes a lyrical barrage of legendary rhymes and fireballs!");
+        let hitChance = Math.random();
+        if (hitChance < this.accuracy) {
+            console.log(`Bang! Fendi Foxy Brown takes ${this.firepower} damage, and that F logo just got scuffed up!`);
+            target.hull -= this.firepower;
+        } else {
+            console.log("Missed! Fired-up Fendi Foxy Brown dodges with the finesse of a fashion icon, making it even harder to touch!");
+        }
+    }
+}
+
+class FendiFoxyBrown {
+    constructor() {
+        this.hull = Math.floor(Math.random() * 4) + 3;
+        this.firepower = Math.floor(Math.random() * 3) + 2;
+        this.accuracy = Math.random() * 0.2 + 0.6;
+    }
+
+    attack(target) {
+        console.log("Fendi Foxy Brown retaliates with a fierce fashion fireball strike, dripping in designer style!");
+        let hitChance = Math.random();
+        if (hitChance < this.accuracy) {
+            console.log(`Direct hit! Lieutenant Lil Kim takes ${this.firepower} damage, and her reputation just took a hit too!`);
+            target.hull -= this.firepower;
+        } else {
+            console.log("Fendi Foxy Brown misses! Lieutenant Lil Kim readies her German Reuger fire thrower to bring the heat!");
+        }
+    }
+}
+
+const lieutenantLilKim = new LieutenantLilKim();
+const fendiFoxyBrown = new FendiFoxyBrown();
+
+while (lieutenantLilKim.hull > 0 && fendiFoxyBrown.hull > 0) {
+    lieutenantLilKim.attack(fendiFoxyBrown);
+    if (fendiFoxyBrown.hull > 0) {
+        fendiFoxyBrown.attack(lieutenantLilKim);
+    }
+}
+
+if (lieutenantLilKim.hull > 0) {
+    console.log("Lieutenant Lil Kim wins! That Fendi Foxy Brown is headed straight to the clearance rack, dethroned and defeated!");
+} else {
+    console.log("Fendi Foxy Brown wins! Lieutenant Lil Kim's verses just got silenced, and her fireballs dimmed!");
+}
+
+module.exports = { LieutenantLilKim, FendiFoxyBrown };
+
 
 
 
