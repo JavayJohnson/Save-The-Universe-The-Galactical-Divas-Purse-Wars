@@ -234,7 +234,7 @@ class FendiFoxyBrown {
             console.log(`Direct hit! Lieutenant Lil Kim takes ${this.firepower} damage, and her reputation just took a hit too!`);
             target.hull -= this.firepower;
         } else {
-            console.log("Fendi Foxy Brown misses! Lieutenant Lil Kim readies her German Reuger fire thrower to bring the heat!");
+            console.log("Fendi Foxy Brown misses! Lieutenant Lil Kim readies her German Ruger fire thrower to bring the heat!");
         }
     }
 }
@@ -254,6 +254,11 @@ if (lieutenantLilKim.hull > 0) {
 } else {
     console.log("Fendi Foxy Brown wins! Lieutenant Lil Kim's verses just got silenced, and her fireballs dimmed!");
 }
+
+
+
+
+// this console log works
 
 
 
@@ -312,4 +317,60 @@ if (majorMaryJBlige.hull > 0) {
 }
 
 
+
+// This Console log works
+
+class GeneralJillScott {
+    constructor() {
+        this.hull = 20;
+        this.firepower = 5;
+        this.accuracy = 0.7;
+    }
+
+    attack(target) {
+        console.log("General Jill Scott strikes with the power of soulful poetry and divine fireballs!");
+        let hitChance = Math.random();
+        if (hitChance < this.accuracy) {
+            console.log(`Pow! Doja Dior takes level ${this.firepower} damage, and that Dior purse tag has been demolished!`);
+            target.hull -= this.firepower;
+        } else {
+            console.log("Missed! Doja Dior swerves with the grace of a pop sensation, making it tough for General Jill Scott to land her next strike!");
+        }
+    }
+}
+
+class DojaDior {
+    constructor() {
+        this.hull = Math.floor(Math.random() * 4) + 3;
+        this.firepower = Math.floor(Math.random() * 3) + 2;
+        this.accuracy = Math.random() * 0.2 + 0.6;
+    }
+
+    attack(target) {
+        console.log("Doja Dior retaliates with a futuristic fashion fireball blast, dripping in avant-garde couture!");
+        let hitChance = Math.random();
+        if (hitChance < this.accuracy) {
+            console.log(`Bullseye! General Jill Scott takes level ${this.firepower} damage, and her falters!`);
+            target.hull -= this.firepower;
+        } else {
+            console.log("Doja Dior misses! General Jill Scott is ready to throw another single fireball right on target!");
+        }
+    }
+}
+
+const generalJillScott = new GeneralJillScott();
+const dojaDior = new DojaDior();
+
+while (generalJillScott.hull > 0 && dojaDior.hull > 0) {
+    generalJillScott.attack(dojaDior);
+    if (dojaDior.hull > 0) {
+        dojaDior.attack(generalJillScott);
+    }
+}
+
+if (generalJillScott.hull > 0) {
+    console.log("General Jill Scott wins! Doja Dior is knocked off the catwalk, defeated, dethroned and depreciated!");
+} else {
+    console.log("Doja Dior wins! General Jill Scott's smooth verses are silenced, and her soulful attack fades away!");
+}
 
