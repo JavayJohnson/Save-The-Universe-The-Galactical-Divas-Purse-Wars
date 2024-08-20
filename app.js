@@ -22,9 +22,9 @@ class CaptainChakaKhan {
 
 class GucciGlorilla {
     constructor() {
-        this.hull = Math.floor(Math.random() * 4) + 3;
-        this.firepower = Math.floor(Math.random() * 3) + 2;
-        this.accuracy = Math.random() * 0.2 + 0.6;
+        this.hull = Math.floor(Math.random() * 2) + 3;
+        this.firepower = Math.floor(Math.random() * 3) + 4;
+        this.accuracy = Math.random() * 0.2 + 0.9;
     }
 
     attack(target) {
@@ -63,9 +63,9 @@ if (captainChakaKhan.hull > 0) {
 
 class ColonelCardiBlast {
     constructor() {
-        this.hull = 20;
+        this.hull = 15;
         this.firepower = 5;
-        this.accuracy = 0.7;
+        this.accuracy = 0.4;
     }
 
     attack(target) {
@@ -82,9 +82,9 @@ class ColonelCardiBlast {
 
 class LattoVuitton {
     constructor() {
-        this.hull = Math.floor(Math.random() * 4) + 3;
-        this.firepower = Math.floor(Math.random() * 3) + 2;
-        this.accuracy = Math.random() * 0.2 + 0.6;
+        this.hull = Math.floor(Math.random() * 1) + 4;
+        this.firepower = Math.floor(Math.random() * 3) + 1;
+        this.accuracy = Math.random() * 0.3 + 0.5;
     }
 
     attack(target) {
@@ -117,9 +117,9 @@ if (colonelCardiBlast.hull > 0) {
 
 class Lattovuitton {
     constructor() {
-        this.hull = Math.floor(Math.random() * 3) + 3;
-        this.firepower = Math.floor(Math.random() * 2) + 2;
-        this.accuracy = Math.random() * 0.2 + 0.6;
+        this.hull = Math.floor(Math.random() * 4) + 4;
+        this.firepower = Math.floor(Math.random() * 1) + 2;
+        this.accuracy = Math.random() * 0.2 + 0.7;
     }
 
     attack(target) {
@@ -144,7 +144,7 @@ class Lattovuitton {
 class SoldierSade {
     constructor() {
         this.hull = 20;
-        this.firepower = 5;
+        this.firepower = 3;
         this.accuracy = 0.7;
     }
 
@@ -162,9 +162,9 @@ class SoldierSade {
 
 class BeyonceBirkinBag {
     constructor() {
-        this.hull = Math.floor(Math.random() * 4) + 3;
+        this.hull = Math.floor(Math.random() * 2) + 1;
         this.firepower = Math.floor(Math.random() * 3) + 2;
-        this.accuracy = Math.random() * 0.2 + 0.6;
+        this.accuracy = Math.random() * 0.3 + 0.5;
     }
 
     attack(target) {
@@ -203,9 +203,9 @@ if (soldierSade.hull > 0) {
 
 class LieutenantLilKim {
     constructor() {
-        this.hull = 20;
-        this.firepower = 5;
-        this.accuracy = 0.7;
+        this.hull = 25;
+        this.firepower = 8;
+        this.accuracy = 0.9;
     }
 
     attack(target) {
@@ -222,9 +222,9 @@ class LieutenantLilKim {
 
 class FendiFoxyBrown {
     constructor() {
-        this.hull = Math.floor(Math.random() * 4) + 3;
-        this.firepower = Math.floor(Math.random() * 3) + 2;
-        this.accuracy = Math.random() * 0.2 + 0.6;
+        this.hull = Math.floor(Math.random() * 3) + 3;
+        this.firepower = Math.floor(Math.random() * 3) + 4;
+        this.accuracy = Math.random() * 0.2 + 0.4;
     }
 
     attack(target) {
@@ -264,9 +264,9 @@ if (lieutenantLilKim.hull > 0) {
 
 class MajorMaryJBlige {
     constructor() {
-        this.hull = 20;
-        this.firepower = 5;
-        this.accuracy = 0.7;
+        this.hull = 15;
+        this.firepower = 8;
+        this.accuracy = 1.0;
     }
 
     attack(target) {
@@ -283,9 +283,9 @@ class MajorMaryJBlige {
 
 class RihannaBalenciaga {
     constructor() {
-        this.hull = Math.floor(Math.random() * 4) + 3;
-        this.firepower = Math.floor(Math.random() * 3) + 2;
-        this.accuracy = Math.random() * 0.2 + 0.6;
+        this.hull = Math.floor(Math.random() * 1) + 4;
+        this.firepower = Math.floor(Math.random() * 4) + 3;
+        this.accuracy = Math.random() * 0.2 + 0.3;
     }
 
     attack(target) {
@@ -322,9 +322,9 @@ if (majorMaryJBlige.hull > 0) {
 
 class GeneralJillScott {
     constructor() {
-        this.hull = 20;
-        this.firepower = 5;
-        this.accuracy = 0.7;
+        this.hull = 12;
+        this.firepower = 8;
+        this.accuracy = 0.9;
     }
 
     attack(target) {
@@ -341,9 +341,9 @@ class GeneralJillScott {
 
 class DojaDior {
     constructor() {
-        this.hull = Math.floor(Math.random() * 4) + 3;
-        this.firepower = Math.floor(Math.random() * 3) + 2;
-        this.accuracy = Math.random() * 0.2 + 0.6;
+        this.hull = Math.floor(Math.random() * 3) + 2;
+        this.firepower = Math.floor(Math.random() * 2) + 1;
+        this.accuracy = Math.random() * 0.1 + 0.4;
     }
 
     attack(target) {
