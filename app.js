@@ -134,7 +134,7 @@ class Lattovuitton {
     }
 }
 
-module.exports = { ColonelCardiBlast, Lattovuitton };
+
 
 
 
@@ -152,7 +152,7 @@ class SoldierSade {
         console.log("Soldier Sade strikes with the power of a flash sale frenzy!");
         let hitChance = Math.random();
         if (hitChance < this.accuracy) {
-            console.log(`Boom! Beyonce Birkin Bag takes ${this.firepower} damage, and that iconic B just lost its shine!`);
+            console.log(`Boom! Beyonce Birkin Bag takes level ${this.firepower} damage, and that iconic B just lost its shine!`);
             target.hull -= this.firepower;
         } else {
             console.log("Missed! And now Beyonce Birkin Bag's rarity just skyrocketed, making it even harder to snag!");
@@ -171,7 +171,7 @@ class BeyonceBirkinBag {
         console.log("Beyonce Birkin Bag fires back with a designer whip from its golden chain strap!");
         let hitChance = Math.random();
         if (hitChance < this.accuracy) {
-            console.log(`Direct hit! Soldier Sade takes ${this.firepower} damage, and her budget just took a hit too!`);
+            console.log(`Direct hit! Soldier Sade takes level ${this.firepower} damage, and her budget just took a hit too!`);
             target.hull -= this.firepower;
         } else {
             console.log("Swing and a miss! Soldier Sade dodges and prepares to cut those designer dreams down to size!");
@@ -195,7 +195,7 @@ if (soldierSade.hull > 0) {
     console.log("The Beyonce Birkin Bag wins! Soldier Sade's wallet just got served an eviction notice!");
 }
 
-module.exports = { SoldierSade, BeyonceBirkinBag };
+
 
 
 
@@ -255,8 +255,61 @@ if (lieutenantLilKim.hull > 0) {
     console.log("Fendi Foxy Brown wins! Lieutenant Lil Kim's verses just got silenced, and her fireballs dimmed!");
 }
 
-module.exports = { LieutenantLilKim, FendiFoxyBrown };
 
+
+class MajorMaryJBlige {
+    constructor() {
+        this.hull = 20;
+        this.firepower = 5;
+        this.accuracy = 0.7;
+    }
+
+    attack(target) {
+        console.log("Major Mary J Blige belts out a soulful attack, sending waves of R&B energy and blinged fireballs!");
+        let hitChance = Math.random();
+        if (hitChance < this.accuracy) {
+            console.log(`Boom! Rihanna Balenciaga takes level ${this.firepower} damage, and that Balenciaga logo just fell off!`);
+            target.hull -= this.firepower;
+        } else {
+            console.log("Missed! Rihanna Balenciaga dodges with the grace of a runway queen, making it harder for Major Mary J Blige to land a hit!");
+        }
+    }
+}
+
+class RihannaBalenciaga {
+    constructor() {
+        this.hull = Math.floor(Math.random() * 4) + 3;
+        this.firepower = Math.floor(Math.random() * 3) + 2;
+        this.accuracy = Math.random() * 0.2 + 0.6;
+    }
+
+    attack(target) {
+        console.log("Rihanna Balenciaga strikes back with a high-fashion fireball, laced with couture-level precision!");
+        let hitChance = Math.random();
+        if (hitChance < this.accuracy) {
+            console.log(`Direct hit! Major Mary J Blige takes level ${this.firepower} damage, and her rhythm just hit a sour note!`);
+            target.hull -= this.firepower;
+        } else {
+            console.log("Rihanna Balenciaga misses! Major Mary J Blige prepares to drop another chart-topping attack on the suede!");
+        }
+    }
+}
+
+const majorMaryJBlige = new MajorMaryJBlige();
+const rihannaBalenciaga = new RihannaBalenciaga();
+
+while (majorMaryJBlige.hull > 0 && rihannaBalenciaga.hull > 0) {
+    majorMaryJBlige.attack(rihannaBalenciaga);
+    if (rihannaBalenciaga.hull > 0) {
+        rihannaBalenciaga.attack(majorMaryJBlige);
+    }
+}
+
+if (majorMaryJBlige.hull > 0) {
+    console.log("Major Mary J Blige wins! Rihanna Balenciaga is off the runway and into the discount bin, outstyled and outplayed!");
+} else {
+    console.log("Rihanna Balenciaga wins! Major Mary J Blige's melodies are muted, and her blinged fireballs fizzled out!");
+}
 
 
 
